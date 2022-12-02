@@ -6,9 +6,15 @@ namespace WebApplication1.Controllers
     [Route("tasks")]
     public class TasksExampleController : ControllerBase
     {
-        
         [HttpGet("asynchronous")]
-        public async Task<IActionResult> GetTasks()
+        public async Task<IActionResult> GetTasksExample1()
+        {
+            return Ok("");
+        }
+
+        
+        [HttpGet("synchronous")]
+        public async Task<IActionResult> GetTasksExample2()
         {
             return Ok("");
         }
