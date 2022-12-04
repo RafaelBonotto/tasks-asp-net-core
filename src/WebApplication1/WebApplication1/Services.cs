@@ -6,6 +6,6 @@ namespace WebApplication1
             => "Task Service 1 Executed";
 
         public async Task<int> GetTaskTwo()
-            => 3;
+            => 2;
     }
 }

@@ -18,28 +18,29 @@ namespace WebApplication1.Controllers
             List<string> response = new ();
 
             Task<string> task1 = _services.GetTaskOne();
-            Task<string> task2 = _services.GetTaskTwo();
-            Task<int> task3 = _services.GetTaskTree();
+            Task<string> task2 = _services.GetTaskOne();
+            Task<string> task3 = _services.GetTaskOne();
+
+            Task<int> task4 = _services.GetTaskTwo();
+            Task<int> task5 = _services.GetTaskTwo();
+            Task<int> task6 = _services.GetTaskTwo();
 
             tasks.Add(task1);
             tasks.Add(task2);
             tasks.Add(task3);
+            tasks.Add(task4);
+            tasks.Add(task5);
+            tasks.Add(task6);
 
             await Task.WhenAll(tasks);
 
-            var axu = task1.Result;
-            var aux = task2.Result;
-            var auxInt = task3.Result;
+            response.Add(task1.Result);
+            response.Add(task2.Result);
+            response.Add(task3.Result);
 
-            response.Add(axu);
-            response.Add(aux);
-            response.Add(auxInt.ToString());
-
-            //foreach (var task in tasks)
-            //{
-            //    var result = ((Task<string>)task).Result;
-            //    response.Add(task.res);
-            //}
+            response.Add($"Task <int> Service {task4.Result} Executed"); 
+            response.Add($"Task <int> Service {task5.Result} Executed"); 
+            response.Add($"Task <int> Service {task6.Result} Executed"); 
 
             return Ok(response);
         }
