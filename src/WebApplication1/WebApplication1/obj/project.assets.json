@@ -466,9 +466,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rbonotto\\Documents\\Pessoal\\Projetos\\Git\\tasks-asp-net-core\\src\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
-      "projectName": "WebApplication1",
-      "projectPath": "C:\\Users\\rbonotto\\Documents\\Pessoal\\Projetos\\Git\\tasks-asp-net-core\\src\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\Users\\rbonotto\\Documents\\Pessoal\\Projetos\\Git\\tasks-asp-net-core\\src\\WebApplication1\\WebApplication1\\TasksExamples.csproj",
+      "projectName": "TasksExamples",
+      "projectPath": "C:\\Users\\rbonotto\\Documents\\Pessoal\\Projetos\\Git\\tasks-asp-net-core\\src\\WebApplication1\\WebApplication1\\TasksExamples.csproj",
       "packagesPath": "C:\\Users\\rbonotto\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\rbonotto\\Documents\\Pessoal\\Projetos\\Git\\tasks-asp-net-core\\src\\WebApplication1\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",

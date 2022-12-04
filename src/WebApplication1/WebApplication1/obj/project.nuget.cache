@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "53gDZzUNrbbCCL0qUfKEHQEjZpVxpHAw+K2Z5BQh99jmPNTaRlg3TT8AcgHvri++eGluWCGYc0+LtlmTkmU50w==",
+  "dgSpecHash": "Goh2rWk3b2tSHXrS3EJZzyTqEMmMAqP5mLi4Nvn7O/BppeyqMxKPAwMRUxtnCKB/MwXBw3xm4MAchzzlrnKgaw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rbonotto\\Documents\\Pessoal\\Projetos\\Git\\tasks-asp-net-core\\src\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+  "projectFilePath": "C:\\Users\\rbonotto\\Documents\\Pessoal\\Projetos\\Git\\tasks-asp-net-core\\src\\WebApplication1\\WebApplication1\\TasksExamples.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rbonotto\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.0\\microsoft.aspnetcore.openapi.7.0.0.nupkg.sha512",
     "C:\\Users\\rbonotto\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
