@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace WebApplication1.Controllers
 {
@@ -70,7 +71,7 @@ namespace WebApplication1.Controllers
                 response.Add(task.Result);
 
             foreach (var task in tasksInt)
-                response.Add(task.Result.ToString());
+                response.Add($"Task<int> Service {task.Result} Executed"); 
 
             return Ok(response);
         }
