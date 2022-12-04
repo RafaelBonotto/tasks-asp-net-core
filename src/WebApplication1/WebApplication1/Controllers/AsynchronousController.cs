@@ -12,7 +12,7 @@ namespace WebApplication1.Controllers
             => _services = services;
 
         /// <summary>
-        /// Execução de seis Tasks de froma assincrona
+        /// Execução de 6 Tasks de forma assincrona
         /// </summary>
         [HttpGet("asynchronous-example1")]
         public async Task<IActionResult> GetTasksExample1()
@@ -38,6 +38,39 @@ namespace WebApplication1.Controllers
             response.Add($"Task<int> Service {task4.Result} Executed");
             response.Add($"Task<int> Service {task5.Result} Executed");
             response.Add($"Task<int> Service {task6.Result} Executed");
+
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// Execução de 60 Tasks de forma assincrona, 
+        /// sendo 30 retornando int e 30 retronando string, 
+        /// porém todas executadas em paralelo
+        /// </summary>
+        [HttpGet("asynchronous-example2")]
+        public async Task<IActionResult> GetTasksExample2()
+        {
+            List<Task<string>> tasksString = new();
+            List<Task<int>> tasksInt = new();
+            List<Task> tasks = new();
+            List<string> response = new();
+
+
+            for (int i = 0; i < 30; i++)
+            {
+                tasksString.Add(_services.GetTaskOne());
+                tasksInt.Add(_services.GetTaskTwo());
+            }
+
+            tasks.AddRange(tasksString);
+            tasks.AddRange(tasksInt);
+            await Task.WhenAll(tasks);
+
+            foreach (var task in tasksString)
+                response.Add(task.Result);
+
+            foreach (var task in tasksInt)
+                response.Add(task.Result.ToString());
 
             return Ok(response);
         }
