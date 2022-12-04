@@ -1,10 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace WebApplication1.Controllers
 {
     [ApiController]
-    [Route("tasks")]
+    [Route("tasks-asynchronous")]
     public class AsynchronousController : ControllerBase
     {
         private Services _services;
@@ -15,7 +14,7 @@ namespace WebApplication1.Controllers
         /// <summary>
         /// Execução de 6 Tasks de forma assincrona
         /// </summary>
-        [HttpGet("asynchronous-example1")]
+        [HttpGet("example1")]
         public async Task<IActionResult> GetTasksExample1()
         {
             List<Task> tasks = new();
@@ -48,7 +47,7 @@ namespace WebApplication1.Controllers
         /// sendo 30 retornando int e 30 retronando string, 
         /// porém todas executadas em paralelo
         /// </summary>
-        [HttpGet("asynchronous-example2")]
+        [HttpGet("example2")]
         public async Task<IActionResult> GetTasksExample2()
         {
             List<Task<string>> tasksString = new();
