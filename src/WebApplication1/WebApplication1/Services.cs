@@ -3,9 +3,9 @@ namespace WebApplication1
     public class Services
     {
         public async Task<string> GetTaskOne()
-            => "Task one Executed";
+            => "Task Service 1 Executed";
 
         public async Task<string> GetTaskTwo()
-            => "Task two Executed";
+            => "Task Service 2 Executed";
     }
 }
