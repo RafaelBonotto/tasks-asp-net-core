@@ -6,9 +6,14 @@ namespace WebApplication1.Controllers
     [Route("tasks")]
     public class TasksExampleController : ControllerBase
     {
+        private Services _services;
+
+        public TasksExampleController(Services services)
+            => _services = services;
+
         [HttpGet("asynchronous")]
         public async Task<IActionResult> GetTasksExample1()
-        {
+        {            
             return Ok("");
         }
 
