@@ -49,7 +49,17 @@ namespace WebApplication1.Controllers
         [HttpGet("synchronous")]
         public async Task<IActionResult> GetTasksExample2()
         {
-            return Ok("");
+            List<string> response = new();
+
+            response.Add(await _services.GetTaskOne());
+            response.Add(await _services.GetTaskOne());
+            response.Add(await _services.GetTaskOne());
+
+            response.Add($"Task<int> Service {await _services.GetTaskTwo()} Executed");
+            response.Add($"Task<int> Service {await _services.GetTaskTwo()} Executed");
+            response.Add($"Task<int> Service {await _services.GetTaskTwo()} Executed");
+
+            return Ok(response);
         }
     }
 }
