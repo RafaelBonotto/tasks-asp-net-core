@@ -5,7 +5,7 @@ namespace WebApplication1
         public async Task<string> GetTaskOne()
             => "Task Service 1 Executed";
 
-        public async Task<string> GetTaskTwo()
-            => "Task Service 2 Executed";
+        public async Task<int> GetTaskTwo()
+            => 3;
     }
 }
